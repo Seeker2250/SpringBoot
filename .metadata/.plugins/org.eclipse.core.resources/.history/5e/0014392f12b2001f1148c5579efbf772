@@ -1,0 +1,7 @@
+[스프링 부트 프로젝트 생성]
+workspace 자리에 SpringBootClass 만들어
+sb01_jsp 복사해서 sb02_mybatis 프로젝트명 수정
+MyBatis 사용하도록 설정
+
+ 자동으로 mapper 쓰려면 @MapperScan 주든지 @Mapper 주든지...
+ JUnit 이상하면 maven update project

@@ -1,0 +1,39 @@
+https://spring.io/tools
+Spring Boot 개발환경 세팅
+Spring Tools 4 for eclipse 다운
+압축 풀어
+
+롬복 설치
+1.18.32
+
+jdk 17 설치
+
+jre 17
+encoding type
+lombok
+
+[스프링 부트 프로젝트 생성]
+workspace 자리에 SpringBootClass 만들어
+sb01_jsp가 프로젝트명
+new spring starter project
+maven, jar, java
+
+group : org.sist
+artifact : sb01_jsp
+package : org.sist.sb01_jsp
+
+spring leagacy 6.x랑 동격이야 spring boot는
+spring boot 3.4.0으로 일단 사용하자
+
+
+src/main/resources package
+static 정적 페이지	css, js
+templates  템플릿 폴더
+application.properties 설정 파일
+
+
+http//localhost/index 요청 URL 보내면 index.jsp 응답
+
+org.sist.sb01_jsp라는 top level package 안에
+Sb01JspApplication.java가 main function 가지고 있어
+프로젝트명+Application.java라고 항상 만들어지는 default file

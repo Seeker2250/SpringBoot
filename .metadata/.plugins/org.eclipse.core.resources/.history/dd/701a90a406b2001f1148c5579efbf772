@@ -1,0 +1,3 @@
+spring.application.name=sb01_jsp
+# server port
+server.port=80
