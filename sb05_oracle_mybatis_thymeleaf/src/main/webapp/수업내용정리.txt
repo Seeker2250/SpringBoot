@@ -1,0 +1,9 @@
+[스프링 부트 프로젝트 생성]
+workspace 자리에 SpringBootClass 만들어
+sb03 복사해서 sb04_oracle_mybatis_jsp 프로젝트명 수정
+
+MyBatis + Oracle + thymeleaf 연동 예제
+부서정보 출력할거야
+
+html file - dynamic page + java coding
+jsp는 tomcat을 따르기 때문에 문제가 생겨(war 필요)

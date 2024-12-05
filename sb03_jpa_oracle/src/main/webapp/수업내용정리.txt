@@ -8,3 +8,11 @@ MyBatis 사용하도록 설정
  
  JPA + Oracle 연동 예제
  ORM
+ 
+ context path default가 spring은 top level package였지만 spring boot에서는 /이야
+ 
+ Entity는 table과 mapping되는 java class
+ Entity annotation 중요.
+ Entity Manager는 persistence 상태 관리
+ 
+ entity object는 persistence  context에 저장해, DB랑 동기화 된 채로 유지

@@ -3,6 +3,10 @@
 	<item key="hasShownOverlayPopupBefore" value="true"/>
 	<item key="replaceBarOpen" value="false"/>
 	<list key="searchhistory">
+		<item value="jpa"/>
+		<item value="pool"/>
+		<item value="connection"/>
+		<item value="componen"/>
 		<item value="mybatis"/>
 		<item value="mybatis-spring-boot-starter"/>
 		<item value="jsp"/>

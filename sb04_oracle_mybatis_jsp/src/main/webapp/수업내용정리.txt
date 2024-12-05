@@ -1,0 +1,10 @@
+[스프링 부트 프로젝트 생성]
+workspace 자리에 SpringBootClass 만들어
+sb03 복사해서 sb04_oracle_mybatis_jsp 프로젝트명 수정
+
+MyBatis + Oracle + jsp 연동 예제
+부서정보 출력할거야
+
+DeptController 만들고
+DeptService 만들거야 Interface로...
+DeptServiceImpl class
