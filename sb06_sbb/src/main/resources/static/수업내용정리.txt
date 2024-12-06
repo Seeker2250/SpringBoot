@@ -1,0 +1,19 @@
+[수업내용정리]
+
+1. org.sist.sb06_sbb 패키지
+    top level package(domain 반대로)
+
+2. @SpringBootApplication
+    Sb06bbApplication.java는 시작과 종료를 담당하는 class file(그래서 main function이 있는 것)
+    이 class의 이름은 무조건 프로젝트명+Application.java로 자동 생성
+    
+3. src/main/java : java 파일 저장
+    src/main/resources : java를 제외한 html, css, js, environment 파일 등 저장
+    	ㄴ application.properties 파일 = spring legacy에서 servlet context, root context, security context대신 쓰여
+    	ㄴ static : css, js, 이미지 저장
+    	ㄴ templates : template 파일 저장
+    	   template 파일이란 : html에 java를 삽입할 수 있는 파일
+    	   
+4. src/test/java : 단위 테스트를 진행하는 곳(JUnit 사용)
+
+5. build.gradle : 환경설정 파일 + Groovy script 언어 사용
