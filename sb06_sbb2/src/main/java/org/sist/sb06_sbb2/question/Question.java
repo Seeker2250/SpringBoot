@@ -18,7 +18,10 @@ import lombok.Setter;
 
 @Entity
 @Getter
-@Setter//entity에서는 setter를 잘 안 써
+@Setter//entity에서는 setter를 잘 안 써 VO나 DTO가 따로 있으니까... setter로 저장할 이유가 없지.
+
+//여기서 저장하면 persistence context에 저장되고 그게 거기에서 DB로 가는거야 그러니 바로 DB에 저장되는 건 아님
+//Entity는 DB연동을 위한 거니까 그릇을 따로 만들거야
 public class Question {
 
 	@Id

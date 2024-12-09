@@ -7,6 +7,7 @@ import org.sist.sb06_sbb2.question.Question;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
+import groovy.transform.builder.Builder;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -19,6 +20,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
+//@Builder //setter 말고 이거 써도 돼~
 public class Answer {
 	
 	@Id

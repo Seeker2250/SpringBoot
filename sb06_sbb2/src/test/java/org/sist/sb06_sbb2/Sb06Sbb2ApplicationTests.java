@@ -1,5 +1,6 @@
 package org.sist.sb06_sbb2;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -19,8 +20,8 @@ class Sb06Sbb2ApplicationTests {
 	
 	@Autowired
 	private QuestionRepository questionRepository;
-
-/*	@Test
+/*
+	@Test
 	void testJpa() {
 		//질문 등록 테스트
 		Question q1 = new Question();
@@ -152,7 +153,7 @@ class Sb06Sbb2ApplicationTests {
 	// 답변 저장
 	@Autowired
 	private AnswerRepository answerRepository;
-	/*
+	
 	@Test
 	void testJpa() {
 		
@@ -168,7 +169,7 @@ class Sb06Sbb2ApplicationTests {
 			a.setQuestion(q);
 			this.answerRepository.save(a);
 		}
-		
+		/*
 		 	Hibernate: 
 			    select
 			        q1_0.id,
@@ -185,9 +186,9 @@ class Sb06Sbb2ApplicationTests {
 			        answer
 			        (content, create_date, question_id, id) 
 			    values
-			        (?, ?, ?, default)
-			   	
-	}*/
+			        (?, ?, ?, default)*/
+		   	
+	}
 	
 	
 	
@@ -195,6 +196,7 @@ class Sb06Sbb2ApplicationTests {
 	//데이터 가져오는 방식
 	//1. 즉시 가져오는 방식(Eager)
 	//2. 지연시킨 후에 가져오는 방식(Lazy) 	
+	/*
 	@Transactional
 	@Test
 	void testJpa() {
@@ -207,5 +209,5 @@ class Sb06Sbb2ApplicationTests {
 			answerList.stream().forEach(a -> System.out.println("answer 드가자 : " + a.getContent() ) );
 		}
 		
-	}
+	}*/
 }

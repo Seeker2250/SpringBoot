@@ -1,0 +1,37 @@
+<!-- 기본 틀 상속 받을게 -->
+<html layout:decorate="~{/question/layout}">
+<!-- .html은 생략해도 layout template .html인 걸 알아 -->
+
+<div layout:fragment="content" class="container my-3">
+	<h1>/question/list.html</h1>
+	<table class="table">
+		<thead class="table-dark">
+			<tr>
+				<th>번호</th>
+				<th>제목</th>
+				<th>작성일시</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="question, loop : ${qList}">
+				<td th:text="${loop.count}"></td>
+				<td>
+					<!--<a href="/question/detail/${question.id}" th:text="${asdf.subject}"></a>-->
+					<!--<a th:href="@{/question/detail/${question.id}}" th:text="${question.subject}"></a>-->
+					<a th:href="@{|/question/detail/${question.id}|}" th:text="${question.subject}"></a>
+				</td>
+				<!-- <td th:text="${question.subject}"></td> -->
+				<!--#temporals.format()-->
+				<td th:text="${#temporals.format(question.createDate, 'yyyy-MM-dd')}"></td>
+				<!--<td th:text="${question.createDate}"></td>-->
+				
+			</tr>
+		</tbody>
+	</table>
+	
+	<a th:href="@{/question/create}" class="btn btn-primary">질문 등록</a>
+	
+	
+</div>
+
+</html>

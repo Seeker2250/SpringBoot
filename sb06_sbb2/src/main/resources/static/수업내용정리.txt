@@ -87,6 +87,7 @@ Hibernate:
 
 질문 entity, 답변 entity 생성
 question 패키지
+	ㄴQuestionController.java 추가
 answer 패키지
 
 CRUD Repository(DAO와 같은 포지션, DB와 연결)
@@ -98,3 +99,71 @@ CrudRepository
 PagingAndSortRepository
 JpaRepository
 이 순서로 상속 및 구현
+
+코드로 배우는 스프링 부트 웹 프로젝트
+
+
+
+
+template engine : template(html + java)을 사용하기 위해
+Spring Boot에서 template engine을 지원(Thymeleaf, Mustache, Groovy, Freemarker, Velocity 등)
+1. document 
+https://www.thymeleaf.org
+
+2. 의존 모듈(dependency)
+implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
+
+3. /question/list 요청
+question directory
+		ㄴ list.html
+
+4. controller -> service -> repository
+Service 장점
+	1) transaction 처리
+	2) 복잡한 코드 모듈화
+    3) Entity Object를 DTO Object로 변환	***Boot 특징
+    
+ QuestionService.java
+ 
+ 
+ oop.index: 루프의 순서(루프의 반복 순서, 0부터 1씩 증가)
+loop.count: 루프의 순서(루프의 반복 순서, 1부터 1씩 증가)
+loop.size: 반복 객체의 요소 개수(예를 들어 questionList의 요소 개수)
+loop.first: 루프의 첫 번째 순서인 경우 true
+loop.last: 루프의 마지막 순서인 경우 true
+loop.odd: 루프의 홀수 번째 순서인 경우 true
+loop.even: 루프의 짝수 번째 순서인 경우 true
+loop.current: 현재 대입된 객체(여기서는 question과 동일)
+
+5. 질문 상세보기 처리
+controller + service + repository
+									findById() 있으니까 repository 안 건드릴거야(내장된 crud method)
+									
+6. 답변 기능
+	detail.html
+		답변을 작성할 수 있도록 입력 tag들을 구성(일단 ajax는 안하지만 실제 구성될 땐 ajax가 되어야겠지)
+		근데 그냥 글 밖에 없어서 ajax 안해도 될 듯...
+	<form></form>
+	/answer/create/2 controller 처리
+답변 서비스 추가
+답변 repository 수정
+
+
+
+7. 웹 페이지 디자인
+	src/main/resources
+	 ㄴ static 안에 css, js 등 정적 자원들 있어
+		ㄴstyle.css
+
+8. Bootstrap 사용
+https://getbootstrap.com
+bootstrap-5.3.3-dist.zip 다운 받아서 압축 풀기
+
+9. 페이징 모듈화
+module만들 때 spring legacy에선 tiles를 사용했어
+
+만약 html 문서 구조의 body 태그를 제외한 모든 부분이 동일하게 중복된다면?
+thymeleaf에서는 이런 중복을 제거하기 위해 "템플릿 상속" 기능 제공
+ㄴ 1. 기본 틀이 되는 template 작성
+ㄴ 2. 작성된 template을 상속하여 html 구조 완성

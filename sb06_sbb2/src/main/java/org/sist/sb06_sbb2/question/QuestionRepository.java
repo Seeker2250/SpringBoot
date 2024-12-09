@@ -20,7 +20,7 @@ public interface QuestionRepository extends JpaRepository<Question, Integer>{
 	//find컬럼명Containing
 	List<Question> findBySubjectContaining(String subject);
 	
-	//2. @Query(그냥 JPQL로 쿼리를 날려)
+	//2. @Query(그냥 JPQL, 객체를 사용하는 거 바로 쿼리를 날려)
 	/*
 	@Query("SELECT q 	FROM Question q WHERE q.subject LIKE %:subject%")
 	List<Question> findBySubjectLike(@Param("subject") String subject);
@@ -32,4 +32,6 @@ public interface QuestionRepository extends JpaRepository<Question, Integer>{
 	
 	//WHERE subject=? AND content=?
 	Question findBySubjectAndContent(String subject, String content);
+	
+	//QueryDSL
 }//interface
