@@ -26,6 +26,7 @@ public interface QuestionRepository extends JpaRepository<Question, Integer>{
 	List<Question> findBySubjectLike(@Param("subject") String subject);
 	*/
 	
+	
 	//Query Method 사용
 	List<Question> findBySubjectLike(String subject);
 	
@@ -33,5 +34,5 @@ public interface QuestionRepository extends JpaRepository<Question, Integer>{
 	//WHERE subject=? AND content=?
 	Question findBySubjectAndContent(String subject, String content);
 	
-	//QueryDSL
+	//3. QueryDSL
 }//interface

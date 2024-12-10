@@ -1,0 +1,49 @@
+[수업 내용 정리]
+네비게이션 바(메뉴바 추가) - layout.html에 추가(탑 메뉴는 항상 공통적인 거잖아)
+사이즈를 줄이면 햄버거 메뉴 버튼 생성!
+
+1.
+<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">SBB</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">로그인</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+2. layout.html에서 네비게이션 바 분리(모듈화)
+
+3. 페이징 처리 구현~
+	따로 설치 모듈 X+ jpa 모듈 안에 paging 관련된 package 포함되어 있기 때문
+	자주 쓰는 것들
+	패키지명
+	-1) org.springframework.data.domain.Page class
+   		 ㄴ페이징을 위한 class
+   		 
+	 2) org.springframework.data.domain.PageRequest class
+	 	 ㄴ현재 페이지 번호, 한 페이지에 출력할 게시글 수 등을 설정하여 페이징처리를 요청하는 class
+	 	 
+	 3) org.springframework.data.domain.Pageable interface
+	 	 ㄴ페이징을 처리하는 기능이 있는 interface
+
+Jsp / spring legacy 때 Criteria
+모든 게시글 정보 조회하는 selectAll()만들었다가
+모든 게시글 정보 조회하는 selectAll() + 페이징 처리로 구현했었음
+< 11 [12] 13 ... 20>
+
+
+게시글 번호 ~
+
+list.html에서 제목 뒤에 답글 갯수 출력
+글번호		제목			작성일시
+			제목...(2)
+			제목...(3)

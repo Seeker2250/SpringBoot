@@ -7,6 +7,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
+//입력 받는 애들 담는 거니까 DTO
 public class QuestionForm {
 	@NotEmpty(message = "제목은 필수항목입니다.")
 	@Size(max = 200)

@@ -2,6 +2,7 @@ package org.sist.sb06_sbb3.question;
 
 import java.util.List;
 
+import org.sist.sb06_sbb3.answer.AnswerForm;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -49,7 +50,7 @@ public class QuestionController {
 	// 질문 상세 보기
 	// /question/detail/2
 	@GetMapping("/detail/{id}")
-	  public String detail(@PathVariable("id") Integer id, Model model) {
+	  public String detail(@PathVariable("id") Integer id, Model model, AnswerForm answerForm) {
 		System.out.println("@@@@@@@@@@@QuestionController detail method  들어옴~");
 		Question question = this.questionService.getQuestion(id);
 		model.addAttribute("question", question);
@@ -59,7 +60,7 @@ public class QuestionController {
 	
 	//질문 등록하기
 	@GetMapping("/create")
-	public void create(QuestionForm questionForm) {//필요없어도 그냥 넣어... 없으면 view단에서 연결할 게 없어서 오류 나(create.html 확인)
+	public void create(QuestionForm questionForm) {//필요없어도 동기화 된 객체가 필요하니까 그냥 넣어... 없으면 view단에서 연결할 게 없어서 오류 나(create.html 확인)
 		System.out.println("@@@@@@@@@@@QuestionController create method  들어옴~");
 		
 		

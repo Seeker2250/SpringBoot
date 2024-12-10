@@ -25,3 +25,27 @@ html 구조 변경
 	1. library 설치
 	2. 참고 사이트 : https://beanvalidation.org/
 5) 질문 등록 폼->QuestionForm.java
+
+답변 등록 기능에 form 적용해보자~
+
+<form th:action="@{|/answer/create/${question.id}|}" th:object="${answerForm}" method="post" class="my-3">
+	<div class="alert alert-danger" role="alert" th:if="${#fields.hasAnyErrors()}">
+        <div th:each="err : ${#fields.allErrors()}" th:text="${err}" /><!-- 유효성 검사 돌면서 걸린 거 다 찍어 -->
+    </div>
+    
+    <textarea th:field="*{content}" rows="10" class="form-control"></textarea>
+    <input type="submit" value="답변등록" class="btn btn-primary my-2">
+</form>에서
+
+th:object="${answerForm}"
+이게 달라질 지언정
+
+<div class="alert alert-danger" role="alert" th:if="${#fields.hasAnyErrors()}">
+    <div th:each="err : ${#fields.allErrors()}" th:text="${err}" /><!-- 유효성 검사 돌면서 걸린 거 다 찍어 -->
+</div>
+이건 항상 같을거야
+그러니 모든 입력 폼에서 공통에서 사용하는 템플릿이 될거야
+[공통 템플릿] form_errors.html로 빼두자
+
+
+
