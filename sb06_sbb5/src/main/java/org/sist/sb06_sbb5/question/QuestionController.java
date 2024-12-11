@@ -1,9 +1,15 @@
 package org.sist.sb06_sbb5.question;
 
+import java.security.Principal;
+
 import org.sist.sb06_sbb5.answer.AnswerForm;
 import org.sist.sb06_sbb5.page.Criteria;
 import org.sist.sb06_sbb5.page.PageDTO;
+import org.sist.sb06_sbb5.user.SiteUser;
+import org.sist.sb06_sbb5.user.UserService;
 import org.springframework.data.domain.Page;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -23,6 +29,7 @@ public class QuestionController {
 	
 	//private final QuestionRepository questionRepository;
 	private final QuestionService questionService;
+	private final UserService userService;
 	
 	/*
 	  @GetMapping("/question/list")
@@ -82,6 +89,7 @@ public class QuestionController {
 	  }
 	
 	//질문 등록하기
+	@PreAuthorize("isAuthenticated()")//글 쓸 권한 있어? 없으면 로그인 페이지로 가렴 @EnableMethodSecurity(prePostEnabled = true)
 	@GetMapping("/create")
 	public void create(QuestionForm questionForm) {//필요없어도 동기화 된 객체가 필요하니까 그냥 넣어... 없으면 view단에서 연결할 게 없어서 오류 나(create.html 확인)
 		System.out.println("@@@@@@@@@@@QuestionController create method  들어옴~");
@@ -98,8 +106,9 @@ public class QuestionController {
 		return "redirect:/question/list";
 	}*/
 	//질문 등록 + 유효성 검사
+	@PreAuthorize("isAuthenticated()")//@EnableMethodSecurity(prePostEnabled = true)
 	@PostMapping("/create")
-	public String questionCreate(@Valid QuestionForm questionForm, BindingResult bindingResult) {
+	public String questionCreate(@Valid QuestionForm questionForm, BindingResult bindingResult, Principal principal) {
 		System.out.println("@@@@@@@@@@@QuestionController post로 questionCreate method  들어옴~");
 		
 		if (bindingResult.hasErrors()) {
@@ -107,8 +116,9 @@ public class QuestionController {
 		}
 		String subject = questionForm.getSubject();
 		String content = questionForm.getContent();
+		SiteUser siteUser = this.userService.getUser(principal.getName());
 		//질문 등록
-		this.questionService.create(subject, content);
+		this.questionService.create(subject, content, siteUser);
 		//질문 목록으로 redirect
 		return "redirect:/question/list";
 	}

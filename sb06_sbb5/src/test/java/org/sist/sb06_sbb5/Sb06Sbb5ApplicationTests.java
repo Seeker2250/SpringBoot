@@ -216,14 +216,15 @@ class Sb06Sbb5ApplicationTests {
 		
 	//많은 질문을 추가할거야
 	@Autowired
-	private QuestionService questionService; 
+	private QuestionService questionService;
+	/*
 	@Test
 	void testJpa() {
 			for (int i = 0; i < 285; i++) {
 				String subject = "질문 " + i;
 				String content = "질문 내용 " + i;
-				this.questionService.create(subject, content);
+				this.questionService.create(subject, content, site);
 			}//for
 			
-		}
+		}*/
 }

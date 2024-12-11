@@ -31,3 +31,34 @@ headers((headers) -> headers
 	package name이랑 class 이름 겹치면 곤란하니까 entity class이름은 SiteUser라고 하자
 	
 3-2. UserRepository, UserService
+
+Controller 만들고 회원가입 페이지만 만들면 돼
+->UserCreateForm.java -> UserController에서 처리
+
+네비게이션 바에서 로그인 / 회원가입 추가
+
+등록된 ID, Email -> 회원가입하면 UK 제약조건에 걸려서 오류 생겨
+constraints 위배인 경우에 에러 메시지 출력하고 다시 회원가입 페이지로 이동
+
+로그인과 로그아웃 기능 구현
+사용자 정의 인증 처리 방식
+spring legacy에서는 Custom했던 거~
+
+UserDetailsService implements 했던 것처럼
+UserSecurityService로 구현해보자~!
+
+----------------------------------------------------------
+
+질문 / 답변 - 작성자 처리
+question entity
+answer entity
+@ManyToOne
+private SiteUSer author;
+table AUTHOR_ID 컬럼은 작성자 id, SiteUser 객체의 PK
+
+1. 답변 컨트롤러, 서비스 수정(작성자 추가)
+2. 질문 컨트롤러, 서비스 수정(작성자 추가)
+
+이 상태로는 로그인 안하고 질문/답변 작성시 작성자가 없어서 500 에러 남 그래서 @EnableMethodSecurity(prePostEnabled = true)로 해결
+
+답변 작성자 표시

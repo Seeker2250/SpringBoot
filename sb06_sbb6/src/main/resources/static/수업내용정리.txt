@@ -1,0 +1,47 @@
+[수업 내용 정리]
+
+1. 질문 수정과 삭제 기능 추가
+	entity 수정 날짜 추가
+	
+2. detail.html에서 질문 수정 버튼 추가
+	Question controller method에서 다시 create.html 요청
+	create.html에서 수정 코딩
+	
+	controller와 service 수정
+	
+3. 질문 삭제
+	detail.html 삭제버튼 만들어
+	
+	아래 코딩을 fragment로 만들거야
+	<script>
+		const delete_elements = document.getElementsByClassName("delete");
+		Array.from(delete_elements).forEach(function(element) {
+	    element.addEventListener('click', function() {
+	        if(confirm("정말로 삭제하시겠습니까?")) {
+	            location.href = this.dataset.uri;
+		        };
+		    });
+		});
+	</script>
+	
+	layout.html에서 아랫부분에 위 script 코딩을 원하는 위치에 맞춰서 끼워넣을거야
+	질문 삭제 controller, service 체크
+	
+	
+	
+	
+	
+	
+4. 답변 수정 / 삭제 작업
+
+[목요일]
+좋아요 / 추천 기능
+앵커 기능
+마크다운 적용
+검색 기능
+
+[금요일]
+QueryDSL
+
+[월요일]
+Spring 총정리

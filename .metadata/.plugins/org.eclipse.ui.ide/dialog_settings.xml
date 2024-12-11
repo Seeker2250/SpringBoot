@@ -47,7 +47,7 @@
 		</section>
 	</section>
 	<section name="org.eclipse.text.quicksearch.internal.ui.QuickSearchDialog.DIALOG_SETTINGS">
-		<item key="LAST_QUERY" value="sbb4"/>
+		<item key="LAST_QUERY" value="sbb6"/>
 		<item key="PATH_FILTER" value=""/>
 		<item key="CASE_SENSITIVE" value="true"/>
 		<item key="KEEP_OPEN" value="false"/>
@@ -75,6 +75,7 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Class\Workspace\SpringBootClass\sb06_sbb7"/>
 			<item value="C:\Class\Workspace\SpringBootClass\sb06_sbb"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">

@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 import org.sist.sb06_sbb5.question.Question;
+import org.sist.sb06_sbb5.user.SiteUser;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
@@ -34,5 +35,6 @@ public class Answer {
 	@ManyToOne
 	private Question question;//우리꺼 import한 거임~
 	
-	
+	@ManyToOne
+	private SiteUser author;
 }
