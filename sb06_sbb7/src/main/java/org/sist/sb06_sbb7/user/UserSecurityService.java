@@ -29,8 +29,12 @@ public class UserSecurityService implements UserDetailsService{
 			throw new UsernameNotFoundException("사용자를 찾을수 없습니다.");//spring이 제공하는 exception UsernameNotFoundException
 		}
 		
+		
+		
+		
 		SiteUser siteUser = _siteUser.get();
 		List<GrantedAuthority> authorities = new ArrayList<>();
+		
 		if ("admin".equals(username)) {
 			authorities.add(new SimpleGrantedAuthority(UserRole.ADMIN.getValue()));
 		} else {

@@ -1,19 +1,14 @@
 package org.sist.sb06_sbb6;
 
-import java.time.LocalDateTime;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Optional;
-
 import org.junit.jupiter.api.Test;
-import org.sist.sb06_sbb6.answer.Answer;
 import org.sist.sb06_sbb6.answer.AnswerRepository;
-import org.sist.sb06_sbb6.question.Question;
 import org.sist.sb06_sbb6.question.QuestionRepository;
 import org.sist.sb06_sbb6.question.QuestionService;
+import org.sist.sb06_sbb6.user.SiteUser;
+import org.sist.sb06_sbb6.user.UserCreateForm;
+import org.sist.sb06_sbb6.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.transaction.annotation.Transactional;
 
 
 
@@ -217,14 +212,24 @@ class Sb06Sbb5ApplicationTests {
 	//많은 질문을 추가할거야
 	@Autowired
 	private QuestionService questionService;
-	/*
+	@Autowired
+	private UserService userService;
+
+	 
 	@Test
 	void testJpa() {
+		 UserCreateForm userForm = new UserCreateForm();
+		    userForm.setUsername("testuser");
+		    userForm.setEmail("test@test.com");
+		    userForm.setPassword1("1234");
+		    userForm.setPassword2("1234");
+		    SiteUser user = userService.create(userForm.getUsername(), userForm.getEmail(), userForm.getPassword1());
 			for (int i = 0; i < 285; i++) {
 				String subject = "질문 " + i;
 				String content = "질문 내용 " + i;
-				this.questionService.create(subject, content, site);
+				
+				this.questionService.create(subject, content, user);
 			}//for
 			
-		}*/
+		}
 }

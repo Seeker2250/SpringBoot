@@ -59,6 +59,7 @@ public class QuestionController {
 	  }*/
 	
 	//목록 보기 2번(페이징 처리)
+	/*
 	@GetMapping("/list")
 	  public void list(Model model, @RequestParam(value = "page", defaultValue = "0")int page) {
 		System.out.println("@@@@@@@@@@@QuestionController list method 들어옴~");
@@ -77,6 +78,28 @@ public class QuestionController {
 	    model.addAttribute("pageMaker",  new PageDTO(criteria, total));
 	    
 	  }
+	  */
+	
+	//목록 보기 3번(페이징 처리 + 검색)
+		@GetMapping("/list")
+		  public void list(Model model, @RequestParam(value = "page", defaultValue = "0")int page, @RequestParam(value = "kw", defaultValue = "")String kw) {
+			System.out.println("@@@@@@@@@@@QuestionController list method 들어옴~");
+			//paging 처리가 된 객체를 paging이라고 하자
+			Page<Question> paging = this.questionService.getList(page, kw);
+			//int startPage = (page / 10) * 10;  // 현재 페이지의 시작점
+			//int endPage = Math.min(startPage + 9, paging.getTotalPages() - 1);  // 시작점 + 9가 전체 페이지수보다 크면 전체 페이지수를 끝점으로
+
+			model.addAttribute("paging", paging);
+			model.addAttribute("kw", kw);
+			//model.addAttribute("startPage", startPage);
+			//model.addAttribute("endPage", endPage);
+			
+			
+			Criteria criteria = new Criteria(page+1, 10 ); 
+		    int total = (int)paging.getTotalElements();
+		    model.addAttribute("pageMaker",  new PageDTO(criteria, total));
+		    
+		  }
 	
 	// 질문 상세 보기
 	// /question/detail/2
@@ -115,11 +138,14 @@ public class QuestionController {
 		if (bindingResult.hasErrors()) {
 	        return "/question/create";
 		}
+		
 		String subject = questionForm.getSubject();
 		String content = questionForm.getContent();
 		SiteUser siteUser = this.userService.getUser(principal.getName());
+		
 		//질문 등록
 		this.questionService.create(subject, content, siteUser);
+		
 		//질문 목록으로 redirect
 		return "redirect:/question/list";
 	}
@@ -171,5 +197,12 @@ public class QuestionController {
         return "redirect:/question/list";
     }
 	
-	
+	@PreAuthorize("isAuthenticated()")//로그인 안했으면 로그인으로
+    @GetMapping("/vote/{id}")
+    public String questionVote(Principal principal, @PathVariable("id") Integer id) {
+        Question question = this.questionService.getQuestion(id);
+        SiteUser siteUser = this.userService.getUser(principal.getName());
+        this.questionService.vote(question, siteUser);
+        return String.format("redirect:/question/detail/%s", id);
+    }
 }//class

@@ -1,6 +1,7 @@
 package org.sist.sb06_sbb7.answer;
 
 import java.time.LocalDateTime;
+import java.util.Set;
 
 import org.sist.sb06_sbb7.question.Question;
 import org.sist.sb06_sbb7.user.SiteUser;
@@ -10,6 +11,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
@@ -35,4 +37,7 @@ public class Answer {
 	private SiteUser author;
 	
 	private LocalDateTime modifyDate;
+	
+	@ManyToMany//답변과 회원은 M:N 이처럼 M:N일 때는 테이블이 하나 만들어져 확인할 것 PK가 복합키야
+	private Set<SiteUser> voter;//좋아요는 한 번 밖에 못 누르니까 Set으로
 }

@@ -11,6 +11,9 @@ import org.sist.sb06_sbb7.answer.AnswerRepository;
 import org.sist.sb06_sbb7.question.Question;
 import org.sist.sb06_sbb7.question.QuestionRepository;
 import org.sist.sb06_sbb7.question.QuestionService;
+import org.sist.sb06_sbb7.user.SiteUser;
+import org.sist.sb06_sbb7.user.UserRepository;
+import org.sist.sb06_sbb7.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
@@ -215,16 +218,24 @@ class Sb06Sbb5ApplicationTests {
 		}*/
 		
 	//많은 질문을 추가할거야
-	@Autowired
+	/*@Autowired
 	private QuestionService questionService;
-	/*
+	@Autowired
+	private SiteUser siteUser;
+	@Autowired
+	private UserService userService;
+	@Autowired
+	private UserRepository userRepository;
 	@Test
 	void testJpa() {
-			for (int i = 0; i < 285; i++) {
-				String subject = "질문 " + i;
-				String content = "질문 내용 " + i;
-				this.questionService.create(subject, content, site);
-			}//for
+		SiteUser user = userRepository.getById(1);
+	    
+	    // 생성된 사용자로 질문 생성
+	    for (int i = 0; i < 285; i++) {
+	        String subject = "질문 " + i;
+	        String content = "질문 내용 " + i;
+	        this.questionService.create(subject, content, user);
+	    }
 			
 		}*/
 }

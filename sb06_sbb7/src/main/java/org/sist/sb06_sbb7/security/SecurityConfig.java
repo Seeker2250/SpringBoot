@@ -97,11 +97,7 @@ public class SecurityConfig{
     AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration) throws Exception {
         return authenticationConfiguration.getAuthenticationManager();
     }
-/*위는 legacy에서 했던 아래와 같아
- * <security:authentication-provider user-service-ref="customUserDetailsService">
-    	<security:password-encoder ref="bCryptPasswordEncoder" />
-  	</security:authentication-provider>
-  */
+
 	
 	
 	
@@ -113,4 +109,9 @@ public class SecurityConfig{
 	PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
+	/*위는 legacy에서 했던 아래와 같아
+	 * <security:authentication-provider user-service-ref="customUserDetailsService">
+	    	<security:password-encoder ref="bCryptPasswordEncoder" />
+	  	</security:authentication-provider>
+	  */
 }//class

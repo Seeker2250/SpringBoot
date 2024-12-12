@@ -17,7 +17,8 @@ public class AnswerService {
 	private final AnswerRepository answerRepository;
 	
 	//답변 작성
-	public void create(Question question, String content, SiteUser author) {
+	public Answer create(Question question, String content, SiteUser author) {
+		
 		Answer answer = new Answer();
 		
 		answer.setContent(content);
@@ -26,7 +27,8 @@ public class AnswerService {
 		
 		answer.setAuthor(author);//작성자 정보 추가
 		
-		this.answerRepository.save(answer);
+		this.answerRepository.save(answer);//이거 return 해도 돼
+		return answer;//Mapping 되어있어
 	}
 	
 	// 답변 조회
@@ -50,4 +52,10 @@ public class AnswerService {
     public void delete(Answer answer) {
         this.answerRepository.delete(answer);
     }
+    
+  //추천					답변						추천인(로그인 회원)
+  	public void vote(Answer answer, SiteUser siteUser) {//사실 id만 와도 되는데 객체 단위로 넘어가
+  		answer.getVoter().add(siteUser);
+  		this.answerRepository.save(answer);
+  	}
 }//class

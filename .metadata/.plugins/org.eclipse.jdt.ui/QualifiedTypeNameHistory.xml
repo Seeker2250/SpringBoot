@@ -1,21 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="groovy.transform.builder.Builder"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
-    <fullyQualifiedTypeName name="org.sist.sb06_sbb3.question.Question"/>
-    <fullyQualifiedTypeName name="jakarta.validation.constraints.Size"/>
-    <fullyQualifiedTypeName name="jakarta.validation.constraints.NotEmpty"/>
-    <fullyQualifiedTypeName name="templates.question.QuestionForm"/>
-    <fullyQualifiedTypeName name="lombok.extern.java.Log"/>
-    <fullyQualifiedTypeName name="org.sist.sistproject.manager.ManagerService"/>
-    <fullyQualifiedTypeName name="jakarta.validation.Valid"/>
-    <fullyQualifiedTypeName name="org.sist.sistproject.manager.Posting"/>
-    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
-    <fullyQualifiedTypeName name="org.sist.sistproject.manager.FaqRepository"/>
-    <fullyQualifiedTypeName name="java.util.Optional"/>
-    <fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
-    <fullyQualifiedTypeName name="java.lang.SuppressWarnings"/>
     <fullyQualifiedTypeName name="org.springframework.validation.BindingResult"/>
     <fullyQualifiedTypeName name="org.sist.sb06_sbb3.answer.AnswerForm"/>
     <fullyQualifiedTypeName name="org.sist.sb06_sbb4.question.QuestionService"/>
@@ -58,6 +42,22 @@
     <fullyQualifiedTypeName name="org.springframework.data.domain.Sort"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="org.sist.sistproject.manager.FaqService"/>
+    <fullyQualifiedTypeName name="org.sist.sb06_sbb6.user.SiteUser"/>
+    <fullyQualifiedTypeName name="org.springframework.security.core.userdetails.User"/>
+    <fullyQualifiedTypeName name="org.springframework.security.core.userdetails.User.UserBuilder"/>
+    <fullyQualifiedTypeName name="org.sist.sb06_sbb7.answer.AnswerService"/>
+    <fullyQualifiedTypeName name="org.hibernate.annotations.Comment"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+    <fullyQualifiedTypeName name="org.commonmark.parser.Parser"/>
+    <fullyQualifiedTypeName name="org.commonmark.node.Node"/>
+    <fullyQualifiedTypeName name="org.commonmark.renderer.html.HtmlRenderer"/>
+    <fullyQualifiedTypeName name="org.sist.sb06_sbb7.user.SiteUser"/>
+    <fullyQualifiedTypeName name="org.sist.sb06_sbb7.user.UserService"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="org.sist.sb06_sbb7.user.UserRepository"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.criteria.Join"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.criteria.Predicate"/>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.domain.Specification"/>
+    <fullyQualifiedTypeName name="org.sist.sb06_sbb7.question.Question"/>
 </qualifiedTypeNameHistroy>

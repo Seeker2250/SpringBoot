@@ -61,6 +61,9 @@ dependencies {
     //thymeleaf template engine + spring secutiry + 확장 module
     implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
     
+    //markdown module
+    implementation 'org.commonmark:commonmark:0.21.0'
+    
     //refresh gradle project
 }
 
