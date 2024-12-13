@@ -3,6 +3,10 @@
 	<item key="hasShownOverlayPopupBefore" value="true"/>
 	<item key="replaceBarOpen" value="false"/>
 	<list key="searchhistory">
+		<item value="csrf"/>
+		<item value="author"/>
+		<item value="작성자"/>
+		<item value="post"/>
 		<item value="date"/>
 		<item value="Date"/>
 		<item value="Service"/>
@@ -14,10 +18,6 @@
 		<item value="+id"/>
 		<item value="isEmp"/>
 		<item value="jpa"/>
-		<item value="pool"/>
-		<item value="connection"/>
-		<item value="componen"/>
-		<item value="mybatis"/>
 	</list>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item key="selection" value="sbb"/>

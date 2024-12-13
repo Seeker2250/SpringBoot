@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.springframework.validation.BindingResult"/>
-    <fullyQualifiedTypeName name="org.sist.sb06_sbb3.answer.AnswerForm"/>
-    <fullyQualifiedTypeName name="org.sist.sb06_sbb4.question.QuestionService"/>
-    <fullyQualifiedTypeName name="org.springframework.data.domain.PageRequest"/>
-    <fullyQualifiedTypeName name="org.sist.sb06_sbb4.question.Question"/>
-    <fullyQualifiedTypeName name="org.springframework.data.domain.Sort.Direction"/>
-    <fullyQualifiedTypeName name="org.springframework.data.domain.Sort.Order"/>
-    <fullyQualifiedTypeName name="org.springframework.data.web.PageableDefault"/>
     <fullyQualifiedTypeName name="groovy.transform.ToString"/>
-    <fullyQualifiedTypeName name="org.springframework.data.domain.Page"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
     <fullyQualifiedTypeName name="org.springframework.security.config.annotation.web.configuration.EnableWebSecurity"/>
     <fullyQualifiedTypeName name="groovy.util.logging.Log4j"/>
@@ -38,9 +29,6 @@
     <fullyQualifiedTypeName name="jakarta.persistence.PrePersist"/>
     <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
     <fullyQualifiedTypeName name="org.sist.sistproject.manager.Faq"/>
-    <fullyQualifiedTypeName name="org.springframework.data.domain.Pageable"/>
-    <fullyQualifiedTypeName name="org.springframework.data.domain.Sort"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="org.sist.sistproject.manager.FaqService"/>
     <fullyQualifiedTypeName name="org.sist.sb06_sbb6.user.SiteUser"/>
@@ -60,4 +48,16 @@
     <fullyQualifiedTypeName name="jakarta.persistence.criteria.Predicate"/>
     <fullyQualifiedTypeName name="org.springframework.data.jpa.domain.Specification"/>
     <fullyQualifiedTypeName name="org.sist.sb06_sbb7.question.Question"/>
+    <fullyQualifiedTypeName name="org.springframework.data.domain.Pageable"/>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.support.Querydsl"/>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.support.QuerydslRepositorySupport"/>
+    <fullyQualifiedTypeName name="org.sist.sb06_sbb8.question.QQuestion"/>
+    <fullyQualifiedTypeName name="com.querydsl.jpa.JPQLQuery"/>
+    <fullyQualifiedTypeName name="com.querydsl.core.BooleanBuilder"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="org.sist.sb06_sbb8.question.QuestionSearch"/>
+    <fullyQualifiedTypeName name="org.springframework.data.domain.PageRequest"/>
+    <fullyQualifiedTypeName name="org.springframework.data.domain.Sort"/>
+    <fullyQualifiedTypeName name="org.sist.sb06_sbb8.question.Question"/>
+    <fullyQualifiedTypeName name="org.springframework.data.domain.Page"/>
 </qualifiedTypeNameHistroy>
